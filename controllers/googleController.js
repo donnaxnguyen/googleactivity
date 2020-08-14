@@ -15,4 +15,5 @@ module.exports = {
       })
       .then(results =>
         results.data.items.filter(
-// work in progress .. need to filter results 
+          result =>
+// work in progress .. other code didn't work 
