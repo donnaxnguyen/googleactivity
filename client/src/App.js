@@ -1,14 +1,23 @@
 import React, { Component } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/Search"
-import Banner from "./components/Banner";
+
+import Saved from "./pages/Saved"
+import Navbar from "./components/Navbar/index"
 
 function App() {
   return (
-    <>
-    <Search/>
-    <Banner/>
-    </>
+    <Router>
+      <div>
+        <Navbar/>
+        <Switch>
+            <Route exact path="/" component={Search} />
+            <Route exact path="/search" component={Search} />
+            <Route exact path="/saved" component={Saved} />
+          </Switch>
+      </div>
+    </Router>
   );
 }
 

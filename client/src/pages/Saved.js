@@ -4,7 +4,10 @@ import Navbar from "../components/Navbar/index"
 
 function Saved() {
   return (
-    <Navbar/>
+
+<div>
+    This is saved
+</div>
   );
 }
 

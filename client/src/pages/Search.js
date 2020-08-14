@@ -4,7 +4,10 @@ import Navbar from "../components/Navbar/index"
 
 function Search() {
   return (
-    <Navbar/>
+<div>
+    this is search
+</div>
+
   );
 }
 
