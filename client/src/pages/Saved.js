@@ -35,12 +35,49 @@ class Saved extends Component {
 // had to delete function Saved because react uses render and i called the class Saved above
 render() {
     return (
-
-<div>
-    This is saved
-</div>
-  );
-}
+<Container>
+        <Row>
+          <Col size="md-12">
+            <Jumbotron>
+              <h1 className="text-center">
+                <strong>Google Books Search</strong>
+              </h1>
+              <h2 className="text-center">Search and Save Books</h2>
+            </Jumbotron>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-12">
+            <Card title="Saved Books" icon="download">
+              {this.state.books.length ? (
+                <List>
+                  {this.state.books.map(book => (
+                    <Book
+                      title={book.title}
+                      authors={book.authors.join(", ")}
+                      description={book.description}
+                      image={book.image} 
+                      link={book.link}
+                      
+                      Button={() => (
+                        <button onClick={() => this.handleBookDelete(book._id)}
+                          className="btn btn-danger ml-2">
+                          Delete
+                        </button>
+                      )}
+                    />
+                  ))}
+                </List>
+              ) : (
+                <h2 className="text-center">No Saved Books</h2>
+              )}
+            </Card>
+          </Col>
+        </Row>
+        <Footer />
+      </Container>
+    );
+  }
 }
 
 export default Saved;
