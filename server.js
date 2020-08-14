@@ -1,12 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const routes = require("./routes");
 
-// going to create a routes folder for api files
-// const routes = require("./routes");
 
 const path = require("path");
 const PORT = process.env.PORT || 3001;
-
 const app = express();
 
 // Define middleware here
@@ -19,16 +17,19 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-// app.use(routes);
+app.use(routes);
 
 
 /* mongoose.connect 
 need to add mongodb */
 
-
-
-
-
+// mongoose.connect(
+//   process.env.MONGODB_URI || // need to add mongodb //, 
+//   { 
+//     useCreateIndex: true,
+//     useNewUrlParser: true
+//    }
+//    );
 
 
 // Send every other request to the React app
