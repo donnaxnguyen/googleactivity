@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import "./style.css";
 import Navbar from "../components/Navbar/index"
 
+<<<<<<< HEAD
 // importing apis 
 import API from "../utils/API";
 
@@ -36,6 +37,11 @@ class Saved extends Component {
  
 render() {
     return (
+=======
+function Saved() {
+  return (
+
+>>>>>>> baecc27e6086d0f9064bcdf800aee732ca67501d
 <div>
     This is saved
 </div>

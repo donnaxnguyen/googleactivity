@@ -7,6 +7,7 @@ function Search() {
 <div>
     this is search
 </div>
+
   );
 }
 
