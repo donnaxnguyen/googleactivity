@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import Jumbotron from "./components/Navbar"
 import "./App.css";
 
 function App() {
