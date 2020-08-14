@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Search from "./pages/Search"
+import Banner from "./components/Banner";
 
 function App() {
   return (
-<Search/>
+    <>
+    <Search/>
+    <Banner/>
+    </>
   );
 }
 
