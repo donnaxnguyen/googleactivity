@@ -7,9 +7,9 @@ const axios = require("axios");
 // getting the api , then returning only the given filtered data
 module.exports = {
   findAll: function (req, res) {
-    const query = req.body
+    const { i } = req.body
     axios
-      .get("https://www.googleapis.com/books/v1/volumes" + query)
+      .get("https://www.googleapis.com/books/v1/volumes" + i)
       .then(results => {
         const books = []
 
@@ -23,6 +23,7 @@ module.exports = {
           }
           books.push[bookData]
         });
+        
         res.json(books)
       })
 
