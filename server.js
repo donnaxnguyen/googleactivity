@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const routes = require("./routes");
+// const routes = require("./routes");
 
 
 const path = require("path");
@@ -17,19 +17,19 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-app.use(routes);
+// app.use(routes);
 
 
 /* mongoose.connect 
 need to add mongodb */
 
-mongoose.connect(
-  process.env.MONGODB_URI || // need to add mongodb //, 
-  { 
-    useCreateIndex: true,
-    useNewUrlParser: true
-   }
-   );
+// mongoose.connect(
+//   process.env.MONGODB_URI || // need to add mongodb //, 
+//   { 
+//     useCreateIndex: true,
+//     useNewUrlParser: true
+//    }
+//    );
 
 
 // Send every other request to the React app
