@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 // going to create a routes folder for api files
-const routes = require("./routes");
+// const routes = require("./routes");
 
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-app.use(routes);
+// app.use(routes);
 
 
 /* mongoose.connect 
