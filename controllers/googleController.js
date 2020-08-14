@@ -23,7 +23,6 @@ module.exports = {
           }
           books.push[bookData]
         });
-
         res.json(books)
       })
 
