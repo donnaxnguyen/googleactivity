@@ -1,18 +1,31 @@
 // using axios and requiring models for the book schema
 const axios = require("axios");
-const db = require("../models");
+// const db = require("../models");
 
 // creating methods for the googleController
-
 // findAll searches the google books api 
-
 // getting the api , then returning only the given filtered data
 module.exports = {
-  findAll: function(req, res) {
-    const { query: params } = req; axios
-      .get("https://www.googleapis.com/books/v1/volumes", {
-        params
+  findAll: function (req, res) {
+    const query = req.body
+    axios
+      .get("https://www.googleapis.com/books/v1/volumes" + query)
+      .then(results => {
+        const books = []
+
+        results.items.forEach(book => {
+          const bookData = {
+            title: book.volumeInfo.title,
+            authors: book.volumeInfo.authors,
+            description: book.volumeInfo.description,
+            image: book.volumeInfo.imageLinks.thumbnail,
+            link: book.volumeInfo.infoLink
+          }
+          books.push[bookData]
+        });
+
+        res.json(books)
       })
-      .then(results =>
-        results.data.items.filter(
-// work in progress .. need to filter results 
+
+  }
+}
