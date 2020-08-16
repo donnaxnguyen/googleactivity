@@ -1,6 +1,4 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import Jumbotron from "./components/Navbar"
+import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from "./pages/Search"
@@ -17,7 +15,6 @@ function App() {
             <Route exact path="/" component={Search} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
-
           </Switch>
       </div>
     </Router>
