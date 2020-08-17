@@ -31,6 +31,7 @@ need to add mongodb */
 //    }
 //    );
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googleactivity");
 
 // Send every other request to the React app
 // Define any API routes before this runs
