@@ -9,9 +9,10 @@ module.exports = {
   findAll: function (req, res) {
     const { i } = req.body
     axios
-      .get("https://www.googleapis.com/books/v1/volumes" + i)
+      .get("https://www.googleapis.com/books/v1/volumes?q=" + i)
       .then(results => {
         const books = []
+        //need to modify this so that there are no spaces in the search parameter (i)
 
         results.items.forEach(book => {
           const bookData = {
